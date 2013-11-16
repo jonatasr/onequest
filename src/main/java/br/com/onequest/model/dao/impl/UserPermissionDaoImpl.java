@@ -7,21 +7,21 @@ import org.hibernate.Query;
 import org.springframework.stereotype.Repository;
 
 import br.com.onequest.model.dao.UserPermissionDao;
-import br.com.onequest.model.entity.User;
-import br.com.onequest.model.entity.UserPermission;
+import br.com.onequest.model.entidade.Usuario;
+import br.com.onequest.model.entidade.PermissaoUsuario;
 
 @Repository
-public class UserPermissionDaoImpl extends AbstractDao<UserPermission> implements UserPermissionDao{
+public class UserPermissionDaoImpl extends AbstractDao<PermissaoUsuario> implements UserPermissionDao{
 
 	@Override
 	protected Class getClazz() {
 		
-		return UserPermission.class;
+		return PermissaoUsuario.class;
 	}
 	
-	public List<UserPermission> findPermissoesUsuario(User user) {
+	public List<PermissaoUsuario> findPermissoesUsuario(Usuario user) {
 		if (user == null) {
-			return new ArrayList<UserPermission>();
+			return new ArrayList<PermissaoUsuario>();
 		}
 		Query query = getSession().createQuery("from UserPermission pu where pu.user = ?");
 		query.setEntity(0, user);

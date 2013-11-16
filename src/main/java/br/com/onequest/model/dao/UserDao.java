@@ -1,12 +1,12 @@
 package br.com.onequest.model.dao;
 
-import br.com.onequest.model.entity.User;
+import br.com.onequest.model.entidade.Usuario;
 
 
-public interface UserDao extends DAOBase<User> {
+public interface UserDao extends DAOBase<Usuario> {
 	
-	 User findUserByPassword(String login, String password);
+	 Usuario findUserByPassword(String login, String password);
 	 
-	 User findUser(String login) ;
+	 Usuario findUser(String login) ;
 	
 }

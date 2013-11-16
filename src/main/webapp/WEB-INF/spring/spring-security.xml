@@ -20,7 +20,7 @@
 	
 	<bean id="sfAuthenticationProvider" 
 		  autowire="byType"
-		  class="br.com.onequest.security.SFAuthenticationProvider"/>
+		  class="br.com.onequest.seguranca.SFAuthenticationProvider"/>
 	
 	
 	<security:authentication-manager>
