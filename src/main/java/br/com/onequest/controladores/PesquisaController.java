@@ -53,11 +53,11 @@ public class PesquisaController {
 	
 	@RequestMapping(value="/pesquisa/create")
 	@ResponseBody
-	   public String create() {
+	public Object create() {
 			
-			return "sucesso";
+		return 	(pesquisa.getLayoutPesquisas().size()+1);
 				
-		}
+	}
 	@RequestMapping(value="/salvarPesquisa", method=RequestMethod.POST)
 	public ModelAndView salvarPesquisa(@PathVariable("id") Long id) {
 		

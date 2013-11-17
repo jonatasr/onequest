@@ -24,18 +24,21 @@
 				<span class="float_esquerda">
 					<a class="btn btn-info" href="#" id="btn_criar_pesquisa">Criar Pesquisa</a>
 				</span>
+				<button id="add_questao" class="btn btn-info" >
+					Add Questão.
+				</button>
 			</div>
+			
+			<hr/>
 			
 			
 			<div id="pesquisa_componentes" >
 				
-				<button id="add_questao">
-					Add Questão.
-				</button>
+				
 				<div id="questao_div">
-					<span id="questao_num">
+					<span id="questao_num"></span>
 						<input type="text" id="questao_input" />
-					</span>
+					
 					
 					<span>Tipo
 						<select >
@@ -53,7 +56,15 @@
 							<option value="1">Não</option>
 						</select>
 					</span>
+					
+					<span>Observação
+						<textarea rows="4" cols="100">
+						
+						</textarea>
+					</span>
 				</div>
+				
+				<button class="btn btn-info" >Nova Questão</button>
 				
 			</div>
 			
