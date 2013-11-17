@@ -1,15 +1,29 @@
 
 
 $(document).ready(function(){
+	$("#pesquisa_componentes").hide();  
         $('.carousel').carousel({
           interval: 4000
         });
        
         $('#btn_criar_pesquisa').click(function(){
+
+        	var url = $("#pesquisa_titulo").data("action");
         	
-        	var url = "<c:url value="/pesquisa/salvar_componentes"/>"
-    		$("#pesquisa_componentes").load(url);
-        	alert('teste');
+        	
+        	
+        	  $.ajax({
+              	url: url,
+              	type: "POST",
+              	success: function() {
+              		alert("sucesso");
+              		$("#pesquisa_componentes").show();   		
+              	}
+              });
+   
+        	
+    	/*	$("#pesquisa_componentes").load(url);
+        	alert('teste');*/
         });
         
     });

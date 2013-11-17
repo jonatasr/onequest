@@ -12,7 +12,7 @@
 				<div id="legend">
 					<legend class="">Pesquisa</legend>
 				</div>
-			<div id="pesquisa_titulo" class="float_esquerda">
+			<div id="pesquisa_titulo" class="float_esquerda" data-action="<c:url value='/pesquisa/create/'/>">
 				<span class="float_esquerda">
 					Titulo da Pesquisa
 					<sf:input path="titulo" placeholder="Titulo" class="input-xlarge" id="textinput" />
@@ -25,9 +25,37 @@
 					<a class="btn btn-info" href="#" id="btn_criar_pesquisa">Criar Pesquisa</a>
 				</span>
 			</div>
-				<div id="pesquisa_componentes">
+			
+			
+			<div id="pesquisa_componentes" >
 				
+				<button id="add_questao">
+					Add Questão.
+				</button>
+				<div id="questao_div">
+					<span id="questao_num">
+						<input type="text" id="questao_input" />
+					</span>
+					
+					<span>Tipo
+						<select >
+							<option selected value="Selecione">Selecione!</option>
+							<option value="0">Aberta</option>
+							<option value="1">Multipla Escolha</option>
+							<option value="2">Escolha Unica</option>
+						</select>
+					</span>
+					
+					<span>Obrigatorio
+						<select>
+							<option selected value="Selecione">Selecione!</option>
+							<option value="0">Sim</option>
+							<option value="1">Não</option>
+						</select>
+					</span>
 				</div>
+				
+			</div>
 			
 			</fieldset>
 		</sf:form>
