@@ -7,7 +7,7 @@
      <br>
 		<div class="row">
 		<div class="span2">
-			<img alt="138x137" src="<c:url value="/recursos/bootstrap/img/jose_cort.bmp"/>" class="img-circle" />
+			<img alt="138x137" src="<c:url value="/recursos/images/edson.bmp"/>" class="img-circle" />
 		</div>
 		<div class="span3">
 		  <blockquote>
@@ -24,7 +24,7 @@
 		</div>
 		
 		<div class="span2">
-		  <img alt="182x182" src="<c:url value="/recursos/bootstrap/img/pedro_cort.bmp"/>"  class="img-circle" />
+		  <img alt="182x182" src="<c:url value="/recursos/images/eduardo.bmp"/>"  class="img-circle" />
 		</div>
 		<div class="span3">
 		  <blockquote>
@@ -68,12 +68,12 @@
 		</div>
 		
 		<div class="span2">
-		  <img alt="182x182" src="bootstrap/img/rafael_cort.bmp" class="img-circle" />
+		  <img alt="182x182" src="<c:url value="/recursos/images/ricardo.bmp"/>" class="img-circle" />
 		</div>
 		<div class="span3">
 		  <blockquote>
 			<p><b>Ricardo Yudi Yoshida</b></p>
-			<small><cite title="Source Title">やあ</cite></small>
+			<small><cite title="Source Title">oi</cite></small>
 		  </blockquote>
 		  <p>  
   			<i class="icon-envelope"></i> <a href="mailto:yudi553@gmail.com">yudi553@gmail.com</a> <br> 

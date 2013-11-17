@@ -17,9 +17,9 @@
 	<link href="<c:url value="/recursos/bootstrap/css/bootstrap.min.css"/>" rel="stylesheet">
 	<link href="<c:url value="/recursos/bootstrap/css/bootstrap-responsive.min.css"/>" rel="stylesheet">
 	<link type="text/css" href="<c:url value="/recursos/bootstrap/css/theme.css"/>" rel="stylesheet">
-	
-	<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script> 
-	<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+		
+	<script type="text/javascript" src="<c:url value="/recursos/javascripts/jquery-1.10.1.min.js"/>"></script>
+	<script type="text/javascript" src="<c:url value="/recursos/javascripts/jquery-migrate-1.2.1.min.js"/>"></script>
 	<script type="text/javascript" src="<c:url value="/recursos/bootstrap/js/bootstrap.min.js"/>"></script>
 	<script type="text/javascript" src="<c:url value="/recursos/javascripts/main.js"/>"></script>
 

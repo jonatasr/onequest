@@ -6,6 +6,11 @@
 <div class="navbar navbar-fixed-top">
 	<div class="navbar-inner ">
 		<div class="container">
+		
+			<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-align-justify"></span>
+          </a>
+		
 			<a class="brand" href="<c:url value='/'/>"><img
 				src="<c:url value="/recursos/images/logo_onequest.png"/>" alt="" /></a>
 			<div class="nav-collapse">

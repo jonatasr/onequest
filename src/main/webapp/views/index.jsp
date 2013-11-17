@@ -23,7 +23,7 @@
           </div>
           <div class="item">
             <a href="#">
-              <img src="<c:url value="/recursos/images/teste5.jpg"/>" alt="" />
+              <img src="<c:url value="/recursos/images/slide6.jpg"/>" alt="" />
             </a>
             <!--<div class="carousel-caption">
               <p>Descrição imagem</p>
@@ -61,7 +61,7 @@
             </div>
             <div class="modal-footer" style="text-align: left">
 
-				<button class="btn btn-large btn-block btn-info" type="button" href="tutorial.html">Veja</button>	
+				<button class="btn btn-large btn-block btn-info" type="button" href="tutorial.html">Saiba mais</button>	
 
             </div>
           </div> 
@@ -84,7 +84,7 @@
 				
             </div>
             <div class="modal-footer" style="text-align: left">
-              	<button class="btn btn-block btn-large btn-info" type="button">SAIBAMAIS</button>
+              	<button class="btn btn-block btn-large btn-info" type="button">Saiba mais</button>
             </div>
           </div> 
         </li>
@@ -103,7 +103,7 @@
 				<p>
 	          </div>
           <div class="modal-footer" style="text-align: left">
-            	<button class="btn btn-block btn-info btn-large" type="button">Button</button>
+            	<button class="btn btn-block btn-info btn-large" type="button">Saiba Mais</button>
           </div>
         </div> 
       </li>
