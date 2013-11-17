@@ -15,7 +15,8 @@ import org.springframework.security.core.GrantedAuthority;
 
 @Entity @Table(name="permissao_usuario")
 public class PermissaoUsuario  implements GrantedAuthority, java.io.Serializable {
-	
+
+	private static final long serialVersionUID = -5328197211801224419L;
 	@Id @Generated(GenerationTime.INSERT) 
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="id", unique=true) 

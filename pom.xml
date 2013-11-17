@@ -194,7 +194,7 @@
 
 
 	<build>
-		<finalName>spring-forum</finalName>
+		<finalName>onequest</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>

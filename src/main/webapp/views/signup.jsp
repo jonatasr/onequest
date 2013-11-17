@@ -43,7 +43,7 @@
 				<div class="control-group">
 					<!-- Nome do usuário -->
 					<div class="input-prepend">
-						<label class="control-label" for="username">Nome<sf:errors
+					<label class="control-label" for="nome">Nome<sf:errors
 								path="nome" cssClass="erro" /></label>
 						<div class="controls">
 							<span class="add-on"><i class="icon-user"></i></span>
@@ -57,11 +57,11 @@
 				<div class="control-group">
 					<!-- Username -->
 					<div class="input-prepend">
-						<label class="control-label" for="username">Login:<sf:errors
+						<label class="control-label" for="login">Login:<sf:errors
 								path="login" cssClass="erro" /></label>
 						<div class="controls">
-							<span class="add-on"><i class="icon-heart"></i></span>
-							<sf:password path="senha" placeholder="Login"
+							<span class="add-on"><i class="icon-user"></i></span>
+							<sf:input path="login" placeholder="Login"
 								class="input-xlarge" id="textinput" />
 						</div>
 					</div>
@@ -92,7 +92,7 @@
 					</div>
 				</div>
 
-				<div class="control-group">
+				<%-- <div class="control-group">
 					<!-- Confirmar senha-->
 					<div class="input-prepend">
 						<label class="control-label" for="password_confirm">Confirmar
@@ -103,7 +103,7 @@
 								class="input-xlarge" />
 						</div>
 					</div>
-				</div>
+				</div> --%>
 
 				<div class="control-group">
 					<!-- Botão cadastrar-->

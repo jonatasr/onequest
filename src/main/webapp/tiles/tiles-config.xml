@@ -6,7 +6,8 @@
 	<definition name="main" template="/views/templates/main.jsp">
 		<put-attribute name="titulo" value="One Quest"/>
 		<put-attribute name="cabecalho" value="/views/templates/cabecalho.jsp"/>
-		<put-attribute name="rodape" value="/views/templates/rodape.jsp"/>
+		<put-attribute name="configuracao" value=""/>
+		<put-attribute name="rodape" value=""/>
 	</definition>
 	
     <definition name="index"  extends="main" >
@@ -35,6 +36,18 @@
     
        <definition name="sobre/show" extends="main">
     	<put-attribute name="conteudo" value="/views/sobre.jsp"/>
+    </definition>
+    
+     <definition name="configuracao/panel" extends="main">
+        <put-attribute name="configuracao" value="/views/templates/configuracao_panel.jsp"/>
+    </definition>
+    
+    <definition name="pesquisa/show" extends="configuracao/panel">
+        <put-attribute name="conteudo" value="/views/pesquisa.jsp"/>
+    </definition>
+    
+    <definition name="configuracaoUsuario/show" extends="configuracao/panel">
+        <put-attribute name="conteudo" value="/views/usuario_configuracao.jsp"/>
     </definition>
     
     <definition name="loginFalho" extends="main">

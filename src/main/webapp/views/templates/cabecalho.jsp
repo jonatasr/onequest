@@ -45,8 +45,17 @@
 
 				</sec:authorize>
 				<sec:authorize access="isAuthenticated()">
-				Bem vindo(a) <sec:authentication property="principal" /> - <a
-						href="<c:url value="/j_spring_security_logout"/>">Sair</a>
+				<div id="user_login">
+					<span>
+					
+						Bem vindo(a)<a class="btn-link" href="<c:url value='/usuario/configuracao/' /><sec:authentication property="details.id" />"> <sec:authentication property="principal" /> </a>- <a
+							href="<c:url value="/j_spring_security_logout"/>">Sair</a>
+					</span>
+					<div class="nav pull-right" id="btn_usuario">
+						<a class="btn btn-info" href="<c:url value='/pesquisa/show/'/><sec:authentication property="details.id" />"><i
+						class="icon-pencil icon-white"></i>Criar Pesquisa</a>
+					</div>
+				</div>
 				</sec:authorize>
 
 			</div>

@@ -12,7 +12,8 @@
 			authentication-failure-url="/"
 			login-page="/"
 			default-target-url="/"/>
-		<security:intercept-url pattern="/post/publicar/**" access="hasRole('ROLE_MEMBRO')"/>
+		<security:intercept-url pattern="/usuario/**" access="hasRole('ROLE_MEMBRO')"/>
+		<security:intercept-url pattern="/pesquisa/**" access="hasRole('ROLE_MEMBRO')"/>
 		<!-- 
 		<security:intercept-url pattern="/**" access="isAnonymous()"/>
 		 -->
@@ -25,12 +26,11 @@
 	
 	<security:authentication-manager>
 		<security:authentication-provider ref="sfAuthenticationProvider"/>
-		<security:authentication-provider>
+		<!-- <security:authentication-provider>
 			<security:user-service>
-				<security:user name="jimmy" password="hendrix" authorities="ROLE_MEMBRO"/>
 				<security:user name="admin" password="admin" authorities="ROLE_MEMBRO,ROLE_ADMIN"/>
 			</security:user-service>
-		</security:authentication-provider>
+		</security:authentication-provider> -->
 	</security:authentication-manager>
 
 </beans>

@@ -98,8 +98,7 @@ public class HomeController {
 	@RequestMapping(value="/executarRegistro", method=RequestMethod.POST)
 	public String executarRegistro(@Valid Usuario usuario, 
 									BindingResult bindingResult, 
-									HttpSession sessao, 
-									@RequestParam(value="avatar", required=false) MultipartFile avatar) {
+									HttpSession sessao) {
 		if (bindingResult.hasErrors()) {
 			Map<String, Object> model = new HashMap<String, Object>();
 			model.put("usuario", usuario);
@@ -107,16 +106,12 @@ public class HomeController {
 		}
 		getDaoUsuario().persistir(usuario);
 		getDaoPermissaoUsuario().addRole("ROLE_MEMBRO", usuario);
-		if (! avatar.isEmpty()) {
-			processarAvatar(usuario, avatar);
-		}
-		
 		sessao.setAttribute("usuario", usuario);
 		return "redirect:/";
 	}
 	
 	private void processarAvatar(Usuario usuario, MultipartFile avatar) {
-		File diretorio = new File("/springForum/avatares");
+		File diretorio = new File("/onequest/avatares");
 		if (! diretorio.exists()) {
 			diretorio.mkdirs();
 		}

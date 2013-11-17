@@ -1,18 +1,23 @@
 package br.com.onequest.entidades;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
+import org.hibernate.annotations.Fetch;
 import org.hibernate.annotations.Generated;
 import org.hibernate.annotations.GenerationTime;
 import org.hibernate.validator.constraints.Email;
@@ -32,8 +37,8 @@ public class Usuario implements java.io.Serializable {
 	@NotNull @NotEmpty
 	@Column(name="nome", nullable=false, length=128)
 	private String nome;
-	@Email(message="Isto n√£o √© e-mail") @NotNull @NotEmpty
-	@Column(name="email", nullable=false, length=128, unique=true)
+	@Email(message="Isto n„o È um  e-mail") @NotNull @NotEmpty
+	@Column(name="email", nullable=false, length=128)
 	private String email;
 	@NotNull
 	@Column(name="data_cadastro", nullable=false) @Temporal(TemporalType.TIMESTAMP)
@@ -44,14 +49,16 @@ public class Usuario implements java.io.Serializable {
 	private String login;
 	@Column(name="twitter", nullable=true, length=64, unique=true)
 	private String twitter;
-	
-	
-	
-	
+
 	private transient String senha;
 	@Column(name="ultimo_login", nullable=true) @Temporal(TemporalType.TIMESTAMP)
 	private Date ultimoLogin;
 	
+	@OneToMany(mappedBy="usuario",fetch=FetchType.EAGER)
+	private List<Pesquisa> pesquisas; 
+	
+	@OneToMany(mappedBy="usuario")
+	private List<Empresa> empresas;
 	
 	@Column(name="hash_senha", nullable=false, length=128)
 	private String hashSenha;
@@ -107,7 +114,21 @@ public class Usuario implements java.io.Serializable {
 	public void setDataCadastro(Date dataCadastro) {
 		this.dataCadastro = dataCadastro;
 	}
-	
-	
+	public List<Pesquisa> getPesquisas() {
+		if(pesquisas==null||pesquisas.size()==0)
+			pesquisas = new ArrayList<Pesquisa>();
+		
+		return pesquisas;
+	}
+	public void setPesquisas(List<Pesquisa> pesquisas) {
+		this.pesquisas = pesquisas;
+	}
+	public List<Empresa> getEmpresas() {
+		return empresas;
+	}
+	public void setEmpresas(List<Empresa> empresas) {
+		this.empresas = empresas;
+	}
 
+	
 }

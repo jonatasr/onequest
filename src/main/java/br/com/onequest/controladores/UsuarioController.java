@@ -82,4 +82,13 @@ public class UsuarioController {
 		return getDaoTopico().getTopicosPorAutor(getDaoUsuario().getUsuario(login));
 	}
 	
+	
+	@RequestMapping("/usuario/configuracao/{id}")
+	public ModelAndView usuarioConfiguracao(@PathVariable("id") Long id) {
+		ModelAndView mav = new ModelAndView();
+		Usuario usuario = getDaoUsuario().get(id);
+		mav.getModel().put("usuario", usuario);
+		mav.setViewName("configuracaoUsuario/show");
+		return mav;
+	}
 }

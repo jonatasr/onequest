@@ -119,38 +119,39 @@
 	font-weight: normal;
 	padding: 0.2em;
 }
-#cadastro{
-	width:50%;
-	margin:0 auto;
-}
 
-#form_login{
-	float:right;	
-}
 
-#form_login input{
-	width:140px;	
+#user_login{
+	float:right;
 }
-
-#form_login .input-prepend{
+#user_login span{
+	margin:10px 4px 0 0;
 	float:left;
-	margin-right:10px;
-	margin-top:10px;
-}
-#form_login .input-prepend i{
-	float:left;
-}
-#form_login button{
-	margin-left:3px;
 }
 
 #btn_cadastro{
-	margin-left:7px;
+	margin-left: 10px;
+}
+#btn_usuario{
+	margin-left:10px;
 	float:right;
 }
 
-#form_contato{
-	width:100%;
-	margin:0 auto;	
+.float_esquerda{
+	float:left;
+}
+
+.float_direita{
+	float:right;
+}
+#form_pesquisa legend{
+	text-align: center;
+}
+
+#pesquisa_titulo span{
+	margin-right: 10px;
+}
+
+#btn_criar_pesquisa{
 	
 }
