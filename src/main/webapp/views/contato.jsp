@@ -1,7 +1,10 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-  <div class="container">
+  
+
+  
+  <div class="container"> 
   <div class="row">
-  <div class="well span5">
+  <div class="well span7">
  
     <form>
             <fieldset>
@@ -22,7 +25,7 @@
                     <!--<input type="text" id="email" name="email" class="input-block-level" placeholder="Email">-->
                   </div>
                 </div>
-                <textarea class="span5"rows="5" id="description" name="description" class="input-block-level" placeholder="Description">
+                <textarea class="span5" rows="5" id="description" name="description" class="input-block-level" placeholder="Description">
                 </textarea>
           
 
@@ -30,7 +33,7 @@
               <div class="control-group">
                     <!-- Botão cadastrar-->
                     <div class="controls">
-                      <button type="submit" class="btn btn-info pull-right">Submit</button>
+                      <button type="submit" class="btn btn-info pull-right">Enviar</button>
                     </div>  
               </div>
 
@@ -39,5 +42,5 @@
             </fieldset>
         </form>
   </div>
-  </div>
+   </div> 
 </div>
